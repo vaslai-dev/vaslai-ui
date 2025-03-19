@@ -28,7 +28,16 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["nuxt-svgo", 'nuxt-primevue', '@pinia/nuxt','@vee-validate/nuxt'],
+  modules: [
+    "nuxt-svgo",
+    'nuxt-primevue',
+    '@pinia/nuxt',
+    '@vee-validate/nuxt',
+    '@nuxtjs/sitemap'
+  ],
+  sitemap: {
+    xsl: false
+  },
 
   veeValidate:{
     autoImports:true,
