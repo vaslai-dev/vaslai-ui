@@ -1,4 +1,4 @@
-<script setup>
+<script>
 import { IconBriefcase } from "@tabler/icons-vue";
 import { IconChartAreaLine } from "@tabler/icons-vue";
 import { IconGraph } from "@tabler/icons-vue";
@@ -35,6 +35,7 @@ const handleScroll = () => {
   }
 };
 
+
 // Scroll to top function
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -48,14 +49,35 @@ onMounted(() => {
 onBeforeUnmount(() => {
   window.removeEventListener("scroll", handleScroll);
 });
+
+export default {
+  head() {
+    return {
+      title: "AI-Powered Clinical Trial Data Management & Analysis | Vaslai",
+      meta: [
+        {
+          name: "description",
+          content:
+            "Vaslai revolutionizes Clinical Trial Data Management, Collection, and Analysis with AI-powered solutions. Streamline research, gain real-time insights, and enhance trial accuracy. Try our 30-day free subscription today!",
+        },
+        {
+          name: "keywords",
+          content:
+            "clinical trial data management, clinical trial data analysis, clinical trial data, clinical trial data management software, clinical trial data collection, clinical data trial analysis, clinical trial solutions, AI clinical trial software, clinical trial insights",
+        },
+      ],
+    };
+  },
+};
 </script>
 <template>
+<!--
         <head>
             <title>AI-Powered Clinical Trial Data Management & Analysis | Vaslai</title>
             <meta name="description" content="Vaslai revolutionizes Clinical Trial Data Management, Collection, and Analysis with AI-powered solutions. Streamline research, gain real-time insights, and enhance trial accuracy. Try our 30-day free subscription today!" />
             <meta name="keywords" content="clinical trial data management, clinical trial data analysis, clinical trial data, clinical trial data management software, clinical trial data collection, clinical data trial analysis, clinical trial solutions, AI clinical trial software, clinical trial insights" />
         </head>
-  <!-- Header -->
+   Header -->
   <div class="bg-white">
     <!-- </header> -->
       

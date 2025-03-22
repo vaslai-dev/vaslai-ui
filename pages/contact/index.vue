@@ -1,16 +1,36 @@
-<script setup>
+<script>
 definePageMeta({
   layout: "base-layout",
 });
+export default {
+  head() {
+    return {
+      title: "AI-Powered Clinical Trial Data Management & Analysis | Vaslai",
+      meta: [
+        {
+          name: "description",
+          content:
+            "Vaslai revolutionizes Clinical Trial Data Management, Collection, and Analysis with AI-powered solutions. Streamline research, gain real-time insights, and enhance trial accuracy. Try our 30-day free subscription today!",
+        },
+        {
+          name: "keywords",
+          content:
+            "clinical trial data management, clinical trial data analysis, clinical trial data, clinical trial data management software, clinical trial data collection, clinical data trial analysis, clinical trial solutions, AI clinical trial software, clinical trial insights",
+        },
+      ],
+    };
+  },
+};
 </script>
 
 
 <template>
+<!--
   <head>
             <title>Contact Vasl AI | Get in Touch for Clinical Trial Data</title>
             <meta name="description" content="Have questions? Contact Vasl AI for expert insights on clinical trial data, market intelligence, and AI-powered research solutions." />
             <meta name="keywords" content="Contact Vasl AI, clinical trial support, research inquiries, AI clinical trials, pharma data assistance" />
-</head>
+</head> -->
     <div class="bg-white">
    
     <div class="py-10">
