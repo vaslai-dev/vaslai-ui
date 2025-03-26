@@ -18,7 +18,6 @@ const scrollToSection = (id) => {
             behavior: 'smooth' // You can change this to 'auto' for instant scroll
         });
     }
-
 }
 
 import { ref, onMounted, onBeforeUnmount } from "vue";
@@ -34,7 +33,6 @@ const handleScroll = () => {
     isVisible.value = false;
   }
 };
-
 
 // Scroll to top function
 const scrollToTop = () => {
@@ -66,10 +64,32 @@ export default {
             "clinical trial data management, clinical trial data analysis, clinical trial data, clinical trial data management software, clinical trial data collection, clinical data trial analysis, clinical trial solutions, AI clinical trial software, clinical trial insights",
         },
       ],
+      script: [
+        {
+          hid: 'gtag',
+          src: 'https://www.googletagmanager.com/gtag/js?id=G-5K9HDBS9H7',
+          async: true
+        },
+        {
+          hid: 'gtag-init',
+          innerHTML: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-5K9HDBS9H7');
+          `,
+          type: 'text/javascript'
+        }
+      ],
+      __dangerouslyDisableSanitizersByTagID: {
+        'gtag-init': ['innerHTML']
+      }
     };
   },
 };
 </script>
+
+
 <template>
 <!--
         <head>
