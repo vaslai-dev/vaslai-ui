@@ -1,4 +1,4 @@
-<script>
+<script data-vue-meta="true">
 import { IconBriefcase } from "@tabler/icons-vue";
 import { IconChartAreaLine } from "@tabler/icons-vue";
 import { IconGraph } from "@tabler/icons-vue";

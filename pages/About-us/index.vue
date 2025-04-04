@@ -1,4 +1,4 @@
-<script>
+<script data-vue-meta="true">
 definePageMeta({
   layout: "base-layout",
 });
