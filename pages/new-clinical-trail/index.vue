@@ -10,12 +10,12 @@ const selectedTrial = ref(null);
 const fetchData = async () => {
   try {
     const response = await axios.get(
-      "https://vaslaiapi-bbhhavgpf7avf6db.canadacentral-01.azurewebsites.net/Search?page=1&pageSize=10"
+      "https://clinicaltrialswebapi-cch3g5f0a7cpe0bq.canadacentral-01.azurewebsites.net/Search?&page=15&pageSize=100"      
     );
     console.log("Response:", response.data.data);
     
     // Store trial records
-    trials.value = response.data.data.map(trial => trial.AfricaPactr || trial.UsaClinicalTrialsGov );
+    trials.value = response.data.data.map(trial => trial.AfricaPactr || trial.UsaClinicalTrialsGov || trial.AustraliaNzAnzctr);
   } catch (err) {
     error.value = "Failed to fetch data!";
     console.error(err);
@@ -97,7 +97,7 @@ onMounted(fetchData);
 }
 
 .trial-table th, .trial-table td {
-  border: 1px solid #ccc;
+  border: 2px solid black;
   padding: 8px;
   text-align: left;
 }
@@ -150,5 +150,12 @@ onMounted(fetchData);
 
 .back-button:hover {
   background-color: #0056b3;
+}
+
+.trial-table thead th {
+  position: sticky;
+  top: 0;
+  background-color: #f8f8f8;
+  z-index: 1;
 }
 </style>
